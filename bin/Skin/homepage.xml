@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="840,480" caption="0,0,0,35" roundcorner="5,5">
+  <!-- 默认样式 -->
+  <!--<Default name="Button" value="bordersize=&quot;1&quot; bordercolor=&quot;#FF222222&quot;" />-->
+  <Font shared="true" id="1" name="微软雅黑" size="18" />
+  <HorizontalLayout>
+    <!--左侧导航栏-->
+    <VerticalLayout width="70" bkcolor="#FF2F4050">
+      <Button name="ic_profile" bkimage="icon_profile.png" width="50" height="50" padding="10,20,0,0"/>
+      <Button name="ic_party_work" normalimage="btn_workstation_normal.png" hotimage="btn_workstation_hover.png" width="30" height="30" padding="20,20,0,0"/>
+      <Label text="工作台" height="18" padding="15" textcolor="#FF8a8a8a"/>
+      <Button name="ic_meeting" normalimage="btn_meeting_hover.png" hotimage="btn_meeting_normal.png" width="30" height="30" padding="20,20,0,0"/>
+      <Label text="三会一课" height="18" padding="12" textcolor="#FF8a8a8a"/>
+      <Button name="ic_elearning" normalimage="btn_elearning_normal.png" hotimage="btn_elearning_hover.png" width="30" height="30" padding="20,20,0,0"/>
+      <Label text="在线学习" height="18" padding="12,5,0,0" textcolor="#FF8a8a8a"/>
+      <Button name="ic_sys_setting" normalimage="btn_syssetting_normal.png" width="32" height="32" padding="19,140,0,0"/>
+    </VerticalLayout>
+    <!--右侧tab页-->
+    <VerticalLayout bkcolor="#FFF8F8F8">
+      <!--标题栏-->
+      <HorizontalLayout height="35" bkcolor="#FFFFFFFF">
+        <Label text="父城智慧党建" textcolor="#FF000000" height="35" size="60" bold="true" padding="10"/>
+        <Control />
+        <HorizontalLayout childpadding="5" width="45" padding="8,8,8,0">
+          <Button name="btn_homepage_min" tooltip="最小化" height="18" width="18" normalimage="btn_min_normal.png" hotimage="btn_min_hovered.png" pushedimage="btn_min_pushed.png" />
+          <Button name="btn_homepage_close" tooltip="关闭" height="18" width="18" normalimage="btn_close_normal.png" hotimage="btn_close_hovered.png" pushedimage="btn_close_pushed.png" />
+        </HorizontalLayout>
+      </HorizontalLayout>
+      <!--窗口内容-->
+      <HorizontalLayout>
+        <!--会议菜单选项-->
+        <VerticalLayout width="160" bkcolor="#FFEDF0F5">
+          <HorizontalLayout name="lay_side_meeting_instant" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_meeting_instant" bkimage="btn_meeting_instant.png" width="20" height="20" padding="30,12,0,0"/>
+            <Label text="即时会议"  padding="10,3,0,0" textcolor="#FF202020"/>
+          </HorizontalLayout>
+          <HorizontalLayout name="lay_side_meeting_join" height="40">
+            <Button name="btn_meeting_join" bkimage="btn_meeting_join.png" width="20" height="20" padding="30,12,0,0"/>
+            <Label text="加入会议"  padding="10,5,0,0" textcolor="#FF202020"/>
+          </HorizontalLayout>
+          <HorizontalLayout name="lay_side_meeting_appoint" height="40">
+            <Button name="btn_meeting_appoint" bkimage="btn_meeting_appiont.png" width="20" height="20" padding="30,12,0,0"/>
+            <Label text="预约会议"  padding="10,5,0,0" textcolor="#FF202020"/>
+          </HorizontalLayout>
+          <HorizontalLayout name="lay_side_meeting_list" height="40">
+            <Button name="btn_meeting_list" bkimage="btn_meeting_list.png" width="20" height="20" padding="30,12,0,0"/>
+            <Label text="会议列表"  padding="10,5,0,0" textcolor="#FF202020"/>
+          </HorizontalLayout>
+          <HorizontalLayout name="lay_side_meeting_contact" height="40">
+            <Button name="btn_meeting_contact" bkimage="btn_meeting_contact.png" width="22" height="22" padding="29,12,0,0"/>
+            <Label text="通讯录"  padding="10,5,0,0" textcolor="#FF202020"/>
+          </HorizontalLayout>
+
+          <!--<Label text="会议设置" padding="55,20,0,0" textcolor="#FF202020"/>-->
+        </VerticalLayout>
+        <!--会议tab页，多个，隐藏显示-->
+        <!--tab1:即时会议-->
+        <VerticalLayout name="tab_instant_meeting" visible="true">
+          <HorizontalLayout height="30" padding="20,20" >
+            <Label text="会议主题：" width="60" textcolor="#FF202020"/>
+            <Edit name="edit_InstantTopic" tipvalue="请输入会议主题" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="20,10,0,0" height="30">
+            <Label text="参会人："  width="60" textcolor="#FF202020"/>
+            <Button name="btn_instant_person" text="选择" width="30" textcolor="#FF5998F4"/>
+          </HorizontalLayout>
+          <Control bkimage="gray_line.png" height="1" padding="20,5,20,0"/><!--横线-->
+          <!--参会人员列表-->
+          <Edit name="edit_InstantPerson" visible="false" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+          <HorizontalLayout name="show_instant_person_list" padding="20,10,20,0" height="50" visible="false">
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="王敬涵" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="付顺顺" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="吕寻超" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="史康帅" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="贾现章" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+          </HorizontalLayout>
+          
+          <Control />
+          <Button name="btn_start_instant" text="开始即时会议" padding="200,0,0,20" width="180" height="30" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+        </VerticalLayout>
+
+        <!--tab2:加入会议-->
+        <VerticalLayout name="tab_join_meeting" visible="false">
+          <HorizontalLayout height="30" padding="20,20" >
+            <Label text="会议号码：" width="60" textcolor="#FF202020"/>
+            <Edit name="edit_MeetingNumber" tipvalue="请输入会议号码" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+            <Control />
+          </HorizontalLayout>
+          <Control />
+          <Button name="btn_join_meeting" text="加入会议" padding="200,0,0,20" width="180" height="30" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+        </VerticalLayout>
+
+        <!--tab3:预约会议-->
+        <VerticalLayout name="tab_appoint_meeting" visible="false">
+          <HorizontalLayout height="30" padding="20,20" >
+            <Label text="会议主题：" width="60" textcolor="#FF202020"/>
+            <Edit name="edit_AppointTopic" tipvalue="请输入会议主题" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout height="30" padding="20,10" >
+            <Label text="开始时间：" width="60" textcolor="#FF202020"/>
+            <Edit name="edit_AppointStartTime" tipvalue="yyyy-MM-dd HH:mm" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout height="30" padding="20,10" >
+            <Label text="时长：" width="60" textcolor="#FF202020"/>
+            <Edit name="edit_AppointDuration" tipvalue="请输入会议时长/小时" maxchar="32" textpadding="5,5,5,5"  height="30" width="200" padding="5,0,0,0"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="20,10,0,0" height="30">
+            <Label text="参会人："  width="60" textcolor="#FF202020"/>
+            <Button name="btn_appoint_person" text="选择" width="30" textcolor="#FF5998F4"/>
+          </HorizontalLayout>
+          <Control bkimage="gray_line.png" height="1" padding="20,5,20,0"/><!--横线-->
+          <!--参会人员列表-->
+          <HorizontalLayout name="show_appoint_person_list" padding="20,10,20,0" height="50" visible="false">
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="王敬涵" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="付顺顺" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="吕寻超" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="史康帅" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="40" width="80" bkcolor="#FFFFFFFF" padding="30">
+              <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+              <Label text="贾现章" width="50" textcolor="#FF202020" padding="10"/>
+            </HorizontalLayout>
+          </HorizontalLayout>
+
+          <Control />
+          <Button name="btn_appoint_meeting" text="预约会议" padding="200,0,0,20" width="180" height="30" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+        </VerticalLayout>
+
+        <!--tab4:会议列表-->
+        <VerticalLayout name="tab_meeting_list" visible="false" padding="10,0,0,12">
+          <!--方法一：使用竖向list罗列，显示会议主题，主持人，-->
+          <!--方法二：直接使用图片替代-->
+          <Control bkimage="meeting_list_example.png" />
+        </VerticalLayout>
+
+        <!--tab5.1:一级通讯录-->
+        <VerticalLayout name="tab_meeting_contact" visible="false">
+          <!--单点击通信录：此tab页显示，其余tab页隐藏-->
+          <!--采用树状分级列表或者多页面的list显示通讯录-->
+          <HorizontalLayout padding="10,20" height="20">
+            <Label text="中共宝丰县委员会" width="95" textcolor="#FF5998F4"/><Label text=">中共宝丰县张八桥镇委员会" width="200" textcolor="#FF202020"/><Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,15,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_test_department" bkimage="icon_department.png" width="20" height="20" padding="5,10"/>
+            <Button name="btn_test_department_selector" text="中共宝丰县张八桥镇西火山村支部委员会（测试）" width="262" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_department.png" width="20" height="20" padding="5,10"/>
+            <Label text="中共宝丰县张八桥镇机关支部支部委员会"  width="250" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+        </VerticalLayout>
+
+        <!--tab5.2:二级通讯录（无checkbox和确定按钮）-->
+        <VerticalLayout name="tab_meeting_contact_1" visible="false">
+          <!--单点击通信录：此tab页显示，其余tab页隐藏-->
+          <!--采用树状分级列表或者多页面的list显示通讯录-->
+          <HorizontalLayout padding="10,20" height="20">
+            <Label text="中共宝丰县委员会" width="95" textcolor="#FF5998F4"/>
+            <Label text=">中共宝丰县张八桥镇委员会" width="150" textcolor="#FF5998F4"/>
+            <Label text=">中共宝丰县张八桥镇西火山村支部委员会（测试）" width="300"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,15,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="王敬涵" width="300" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="付顺顺" width="300" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="吕寻超" width="300" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="史康帅" width="300" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="贾现章" width="300" textcolor="#FF202020" padding="10"/>
+            <Control />
+          </HorizontalLayout>
+        </VerticalLayout>
+
+        <!--tab5.3:二级通讯录（有checkbox和确定按钮）-->
+        <VerticalLayout name="tab_meeting_contact_2" visible="false">
+          <!--单点击通信录：此tab页显示，其余tab页隐藏-->
+          <!--采用树状分级列表或者多页面的list显示通讯录-->
+          <HorizontalLayout padding="10,20" height="20">
+            <!--
+            <Label text="中共宝丰县委员会" width="95" textcolor="#FF5998F4"/>
+            <Label text=">中共宝丰县张八桥镇委员会" width="150" textcolor="#FF5998F4"/>
+            -->
+            <Label text=">中共宝丰县张八桥镇西火山村支部委员会（测试）" width="300" textcolor="#FF5998F4"/>
+            <Control />
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,15,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_wjh" bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="王敬涵" width="50" textcolor="#FF202020" padding="10"/>
+            <Control />
+            <Control name="cb_wjh" bkimage="icon_selected.png" width="15" height="15" padding="5,10,5" visible="false"/>
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_fss" bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="付顺顺" width="50" textcolor="#FF202020" padding="10"/>
+            <Control />
+            <Control name="cb_fss" bkimage="icon_selected.png" width="15" height="15" padding="5,10,5" visible="false"/>
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_lxc" bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="吕寻超" width="50" textcolor="#FF202020" padding="10"/>
+            <Control />
+            <Control name="cb_lxc" bkimage="icon_selected.png" width="15" height="15" padding="5,10,5" visible="false"/>
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_sks" bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="史康帅" width="50" textcolor="#FF202020" padding="10"/>
+            <Control />
+            <Control name="cb_sks" bkimage="icon_selected.png" width="15" height="15" padding="5,10,5" visible="false"/>
+
+          </HorizontalLayout>
+          <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
+            <Button name="btn_jxz" bkimage="icon_person.png" width="20" height="20" padding="5,10"/>
+            <Label text="贾现章" width="50" textcolor="#FF202020" padding="10"/>
+            <Control />
+            <Control name="cb_jxz" bkimage="icon_selected.png" width="15" height="15" padding="5,10,5" visible="false"/>
+          </HorizontalLayout>
+          <Control />
+          <Button name="btn_contact_confirm" text="确定" padding="150,0,0,20" width="50" height="20" textcolor="#FFFFFFFF" normalimage="images/button_login_normal.png" hotimage="images/button_login_hover.png" pushedimage="images/button_login_down.png" />
+        </VerticalLayout>
+      </HorizontalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+
+</Window>
