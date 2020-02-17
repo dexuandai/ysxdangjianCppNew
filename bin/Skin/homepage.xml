@@ -32,23 +32,24 @@
         <VerticalLayout width="160" bkcolor="#FFEDF0F5">
           <HorizontalLayout name="lay_side_meeting_instant" height="40" bkcolor="#FFFFFFFF">
             <Button name="btn_meeting_instant" bkimage="btn_meeting_instant.png" width="20" height="20" padding="30,12,0,0"/>
-            <Label text="即时会议"  padding="10,3,0,0" textcolor="#FF202020"/>
+            <Button name="btn_meeting_instant" text="即时会议" width="50" padding="10,3,0,0" textcolor="#FF202020"/>
+            <Control />
           </HorizontalLayout>
           <HorizontalLayout name="lay_side_meeting_join" height="40">
             <Button name="btn_meeting_join" bkimage="btn_meeting_join.png" width="20" height="20" padding="30,12,0,0"/>
-            <Label text="加入会议"  padding="10,5,0,0" textcolor="#FF202020"/>
+            <Button name="btn_meeting_join" width="50" text="加入会议"  padding="10,5,0,0" textcolor="#FF202020"/>
           </HorizontalLayout>
           <HorizontalLayout name="lay_side_meeting_appoint" height="40">
             <Button name="btn_meeting_appoint" bkimage="btn_meeting_appiont.png" width="20" height="20" padding="30,12,0,0"/>
-            <Label text="预约会议"  padding="10,5,0,0" textcolor="#FF202020"/>
+            <Button name="btn_meeting_appoint" text="预约会议" width="50" padding="10,5,0,0" textcolor="#FF202020"/>
           </HorizontalLayout>
           <HorizontalLayout name="lay_side_meeting_list" height="40">
             <Button name="btn_meeting_list" bkimage="btn_meeting_list.png" width="20" height="20" padding="30,12,0,0"/>
-            <Label text="会议列表"  padding="10,5,0,0" textcolor="#FF202020"/>
+            <Button name="btn_meeting_list" width="50" text="会议列表"  padding="10,5,0,0" textcolor="#FF202020"/>
           </HorizontalLayout>
           <HorizontalLayout name="lay_side_meeting_contact" height="40">
             <Button name="btn_meeting_contact" bkimage="btn_meeting_contact.png" width="22" height="22" padding="29,12,0,0"/>
-            <Label text="通讯录"  padding="10,5,0,0" textcolor="#FF202020"/>
+            <Button name="btn_meeting_contact" width="38" text="通讯录"  padding="10,5,0,0" textcolor="#FF202020"/>
           </HorizontalLayout>
 
           <!--<Label text="会议设置" padding="55,20,0,0" textcolor="#FF202020"/>-->
@@ -173,8 +174,8 @@
             <Label text="中共宝丰县委员会" width="95" textcolor="#FF5998F4"/><Label text=">中共宝丰县张八桥镇委员会" width="200" textcolor="#FF202020"/><Control />
           </HorizontalLayout>
           <HorizontalLayout padding="30,15,30" height="40" bkcolor="#FFFFFFFF">
-            <Button name="btn_test_department" bkimage="icon_department.png" width="20" height="20" padding="5,10"/>
-            <Button name="btn_test_department_selector" text="中共宝丰县张八桥镇西火山村支部委员会（测试）" width="262" textcolor="#FF202020" padding="10"/>
+            <Button name="btn_test_department_selector" bkimage="icon_department.png" width="20" height="20" padding="5,10"/>
+            <Button name="btn_test_department" text="中共宝丰县张八桥镇西火山村支部委员会（测试）" width="262" textcolor="#FF202020" padding="10"/>
             <Control />
           </HorizontalLayout>
           <HorizontalLayout padding="30,8,30" height="40" bkcolor="#FFFFFFFF">
